@@ -4,11 +4,5 @@
   <artifactId>jenkinsTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>jenkinsTest</name>
-  <dependencies>
-  <dependency>
-    <groupId>org.jenkins-ci.main</groupId>
-    <artifactId>maven-plugin</artifactId>
-    <version>3.0-rc1</version>
-</dependency>
-</dependencies>
+  
 </project>
