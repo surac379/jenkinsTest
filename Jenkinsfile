@@ -21,7 +21,7 @@ pipeline {
 		stage('Deploy') {
             steps {
                 echo 'Deploying....'
-            dockerfile {
+            Dockerfile {
         		filename 'Dockerfile.build'
         			dir 'build'
         			label 'my-defined-label'
