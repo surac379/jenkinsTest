@@ -10,7 +10,7 @@ pipeline {
 		steps {
 			dir ('jenkinsTest') {
 			echo 'building...'
-			sh "mvn clean install"
+			bat "mvn clean install"
 			}
 			}
 			}
