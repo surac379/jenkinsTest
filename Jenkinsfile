@@ -21,6 +21,14 @@ pipeline {
 		stage('Deploy') {
             steps {
                 echo 'Deploying....'
+            dockerfile {
+        		filename 'Dockerfile.build'
+        			dir 'build'
+        			label 'my-defined-label'
+        			registryUrl 'https://hub.docker.com/'
+        			registryCredentialsId 'dockerhub_id'
+    }    
+            
             }
         }
 	}
