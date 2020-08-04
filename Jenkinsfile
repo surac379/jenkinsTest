@@ -1,12 +1,20 @@
-node {
-
-    checkout scm
-
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub_id') {
-
-        def customImage = docker.build("suraj/dockerwebapp")
-
-        /* Push the container to the custom Registry */
-        customImage.push()
-    }
+Pipeline {
+	agent any
+	Stages {
+		Stage('Build') {
+		steps {
+			echo 'building...'
+			}
+		}
+		Stage('Test') {
+		steps {
+			echo 'Testing...'
+			}
+		}
+		stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+	}
 }
