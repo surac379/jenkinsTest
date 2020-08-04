@@ -8,10 +8,12 @@ pipeline {
         
 		stage('Build') {
 		steps {
+			dir ('jenkinsTest') {
 			echo 'building...'
-			sh "mvn -B deploy"
+			sh "mvn clean install"
 			}
-		}
+			}
+			}
 		stage('Test') {
 		steps {
 			echo 'Testing...'
